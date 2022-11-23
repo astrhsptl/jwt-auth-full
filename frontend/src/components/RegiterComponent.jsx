@@ -1,5 +1,7 @@
 import AuthSystem from '../API/server';
 import React, { useEffect, useState } from 'react';
+import Links from '../UI/Links';
+
 
 const RegiterComponent = ({user, setUser}) => {
   let [localData, setLocalData] = useState({
@@ -39,6 +41,7 @@ const RegiterComponent = ({user, setUser}) => {
 
   return (
     <div>
+      <Links></Links>
       <h1>Form:</h1> <h1>{user.username}</h1>
       <div>
         <input type="text" onChange={(e) => setLocalData({username: e.target.value, email:localData.email, password:localData.password})}/>
